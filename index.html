@@ -28,12 +28,27 @@
           yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
         });
     </script>
-  </body>
- 
-  <audio autoplay loop style="display:none;">
-  <source src="namsan.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+  <body>
+
+  <!-- GIF (already looping) -->
+  <img src="rizz.gif" alt="Rizz GIF">
+
+  <!-- Audio (hidden) -->
+  <audio id="bgAudio" loop>
+    <source src="namsan.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- JavaScript to play audio on first click -->
+  <script>
+    const audio = document.getElementById('bgAudio');
+
+    // Play audio when the user clicks anywhere on the page
+    document.body.addEventListener('click', () => {
+      audio.play();
+    }, { once: true }); // "once: true" ensures it only triggers on first click
+  </script>
+
+</body>
 
 
 </html>
